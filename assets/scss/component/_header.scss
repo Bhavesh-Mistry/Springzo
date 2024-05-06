@@ -1,0 +1,172 @@
+header {
+   &.navbar {
+      flex-direction: column;
+      background-color: $white;
+      padding: 0px 0 20px;
+      transition: all .3s;
+      z-index: 999;
+
+      @media($portrait-phones) {
+         padding: 20px 0;
+      }
+
+      &.darkHeader {
+         top: 0;
+         left: 0;
+         right: 0;
+         box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+         padding: 0 0px 10px;
+
+         .top-navbar {
+            opacity: 0;
+            visibility: hidden;
+            padding: 0;
+            margin: 0 0 10px;
+            height: 0;
+         }
+
+         @media($tablets) {
+            .navbar-collapse {
+               top: 76px;
+            }
+         }
+
+         @media($portrait-phones) {
+            padding: 10px 0;
+         }
+      }
+
+      .top-navbar {
+         display: block;
+         background-color: $clr-light-green;
+         width: 100%;
+         padding: 12px 0;
+         position: relative;
+         z-index: 0;
+         margin-bottom: 20px;
+         transition: all .3s;
+
+         @media($portrait-phones) {
+            display: none;
+         }
+
+         ul {
+            position: relative;
+            z-index: 1;
+
+            li {
+               margin-right: 40px;
+
+               &:last-child {
+                  margin: 0;
+               }
+
+
+
+               a {
+                  font-size: 14px;
+                  color: $white;
+
+                  &:hover {
+                     color: $clr-primary;
+                  }
+
+                  &.lnk {
+                     color: $white;
+                     font-size: 13px;
+                     font-weight: 600;
+                     display: flex;
+                     align-items: center;
+
+                     i {
+                        margin-right: 10px;
+                     }
+                  }
+               }
+            }
+
+
+         }
+      }
+
+      .navbar-brand {
+         margin: 0;
+         padding: 0;
+         transition: all .5s;
+      }
+
+      .navbar-toggler {
+         padding: 0;
+         position: relative;
+         color: $clr-primary;
+         line-height: 1;
+         margin-left: auto;
+
+         &:focus {
+            box-shadow: none;
+         }
+      }
+
+      .navbar-nav {
+         .nav-item {
+            margin: 0 10px;
+
+            &:last-child {
+               margin-right: 0;
+            }
+
+            .nav-link {
+               font-size: 16px;
+               font-weight: 600;
+               color: $clr-primary;
+               position: relative;
+
+               &:hover,
+               &.active {
+                  color: $clr-secondary;
+               }
+            }
+         }
+      }
+
+      .navbar-collapse {
+         @media($tablets) {
+            position: absolute;
+            top: 135px;
+            left: 0;
+            right: 0;
+            background-color: $clr-secondary;
+            border-top: 3px solid $clr-primary;
+            z-index: 99;
+
+            .navbar-nav {
+               margin: 0;
+
+               .nav-item {
+                  margin: 0 0px;
+
+                  .nav-link {
+                     padding: 15px 35px;
+                     border-bottom: 1px solid $white;
+                     color: $white;
+
+                     @media($portrait-phones) {
+                        padding: 15px;
+                     }
+
+                     &:hover,
+                     &.active {
+                        background-color: $clr-primary;
+                        color: $white;
+                     }
+                  }
+               }
+            }
+         }
+
+         @media($portrait-phones) {
+            top: 95px;
+         }
+      }
+   }
+}
